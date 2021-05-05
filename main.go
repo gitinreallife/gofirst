@@ -14,7 +14,8 @@ import (
 func main() {
 
 	fmt.Println("##################################################")
-	PrintArrays()
+	PrintMap()
+	// PrintArrays()
 	// PrintVars()
 	fmt.Println("##################################################")
 	log.SetPrefix("Exception greetings: ")
@@ -31,6 +32,28 @@ func main() {
 	fmt.Println("#####Calling Reverse Module")
 	fmt.Println(morestrings.ReverseRunes("!oG ,olleH"))
 
+}
+func PrintMap() {
+	fmt.Println("############### 1 Map Playground###############")
+
+	statePopulation := map[string]int{
+		"Cali":         39250017,
+		"Texas":        27862596,
+		"Florida":      20612439,
+		"New York":     19745289,
+		"Pennsylvania": 12802503,
+		"Illinois":     12801539,
+		"Ohio":         11614373,
+	}
+	// fmt.Println(statePopulation)
+
+	// m := map[[3]int]string{}
+	statePopulation["Georgia"] = 10310371
+	delete(statePopulation, "Cali")
+
+	_, isFound := statePopulation["Ohio"]
+	fmt.Println(isFound)
+	fmt.Println(statePopulation)
 }
 
 const myConst int = 40
